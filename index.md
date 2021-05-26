@@ -4,37 +4,38 @@ You can use the [editor on GitHub](https://github.com/Pbeeltje/.github.io/edit/g
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+###Python
+[Character Generator](#Chargen)
+
+###JavaScript
 [Timekeeper](#Timekeeper)
 
-### Markdown
+### Character Generator
+<a name="Chargen"></a>
+This Program generates characters for a boardgame. First the program asks how many Sets and characters per set you want. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A character consists of a Name, an Occupation, a Quirk and some Stats (ie Strength, Agility). Names are generated from parts of names stored in arrays. The program then randomly picks an occupation with the appropriate trade-goods from a table in an excel file, along with a Quirk and a random piece of equipment. Stats are rolled randomly, one stat will be dependant on the occupation. 
+
+All these characters and Sets are then put into a docx file. The filename of the docx is stamped with the time of generation so they don't get overwritten.
+![Docx Example](img/exampledoc.jpg)
+
+
+
+At one time this project was pretty clean! it's become a bit more jumbled over time as I added more features.
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 ### Timekeeper
 <a name="Timekeeper"></a>
 This project is basically a manual clock. I made it as a tool for a boardgame where 'game-time'is seperate from 'real-time'.
-It comes in handy because sometime's a minute of game-time might be cause for 20 minutes of discussion in real time, and often the opposite is the case
-where hours or days pass in seconds. 
+It comes in handy because sometime's a minute of game-time might be cause for 20 minutes of discussion in real time. The opposite also often occurs where hours or days pass in seconds.
 
-Besides tracking time, whenever anything more than 2 hours passes the program rolls two six-sides die to determine the weather.
+Besides tracking time, whenever any period longer than 2 hours passes the program rolls two six-sides die to determine the weather.
 
 [Try it out](timekeeper.html)
 
