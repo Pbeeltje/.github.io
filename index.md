@@ -1,4 +1,4 @@
-<header><h1>Portfolio Philip Beeltje</h1></header>
+<header></header>
 
 
 ## About
