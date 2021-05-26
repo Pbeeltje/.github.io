@@ -1,0 +1,45 @@
+<html>
+<head>    
+  <link rel=stylesheet type="text/css" href="timestyle.css">
+    <title>Time Keeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body class="timekeeper">
+    
+    <h1>Time Keeper</h1>
+    
+    <div class="counterdiv">
+    Year:&nbsp <div class="counters countery">1784</div>
+    Month: <div class="counters countermo">1</div>
+    <button class="button green addd" onclick="addCounter(4)">+1 month</button>
+    <button class="button red mind" onclick="minCounter(4)">-1 month</button>
+    <br><br>
+        
+    Day:&nbsp&nbsp <div class="counters counterd">1</div>
+    <button class="button green addd" onclick="addCounter(3)">+1 day&nbsp&nbsp</button>
+    <button class="button red mind" onclick="minCounter(3)">-1 day&nbsp&nbsp</button>
+    <button class="button resetd" onclick="resetCounter(3)">day 1</button>
+    <br><br>
+        
+    Hour: <div class="counters counterh">0</div>
+    <button class="button green addh" onclick="addCounter(2)">+1 hour</button>
+    <button class="button red minh" onclick="minCounter(2)">-1 hour</button>
+    <button class="button reseth" onclick="resetCounter(2)">hour 0</button>
+    <br><br>
+        
+    Min:&nbsp&nbsp <div class="counters counterm">0</div>
+    <button class="button green addm" onclick="addCounter(1)">+10 min</button>
+    <button class="button red minm" onclick="minCounter(1)">-10 min</button>
+    <button class="button resetm" onclick="resetCounter(1)">min 0</button>
+    <br><br>
+        
+    <div style="text-align: center">
+        <div class="status">clear skies</div>
+    </div>    
+        
+    </div>
+       
+</body>
+    
+<script type="text/javascript" src="timescript.js"></script>
+</html>
