@@ -1,10 +1,10 @@
 ## Projects
 Below are some of the coding projects I've been working on:
 
-### Python
+#### Python
 [Character Generator](#Chargen)
 
-### JavaScript
+#### JavaScript
 [Timekeeper](#Timekeeper)
 
 ### Character Generator
@@ -13,7 +13,7 @@ This Program generates characters for a boardgame. First the program asks how ma
 
 A character consists of a Name, an Occupation, a Quirk and some Stats (ie Strength, Agility). Names are generated from parts of names stored in arrays. The program then randomly picks an occupation with the appropriate trade-goods from a table in an excel file, along with a Quirk and a random piece of equipment. Stats are rolled randomly, one stat will be dependant on the occupation. 
 
-This little function counts the number of rows that are filled in in the excell sheet. This makes it so you can keep adding new things to the sheet without having to change any code.
+This little function counts the number of rows that are filled in in the excell sheet. This makes it so you can keep adding new things to the sheet without having to change any code:
 ```markdown
 def rowCounter(sheet):
     count = 0
