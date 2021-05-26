@@ -31,7 +31,7 @@ def rowCounter(sheet):
 ```
 
 All these characters and Sets are then put into a docx file. The filename of the docx is stamped with the time of generation so they don't get overwritten:
-```markdown
+```python
 dateTimeObj = datetime.now() #timestamp to make a unique document name
 timestampStr = dateTimeObj.strftime("%d %b  %H.%M.%S")
 docname = 'DCCgen ' + timestampStr +'.docx' 
@@ -52,7 +52,7 @@ The stocks you want to track are manually inserted into the stock_list dictionar
 The program checks the price every 300ms.
 
 Code: (won't work as is, as you need to set up your own API code and e-mail)
-```markdown
+```python
 """
 Created on Tue Dec 15 14:24:01 2020
 
@@ -131,6 +131,23 @@ This project is basically a manual clock. I made it as a tool for a boardgame wh
 It comes in handy because sometime's a minute of game-time might be cause for 20 minutes of discussion in real time. The opposite also often occurs where hours or days pass in seconds.
 
 Besides tracking time, whenever any period longer than 2 hours passes the program rolls two six-sides die to determine the weather.
+
+The diceroll function, you can choose the amount and upper/lower limit of the die:
+
+```javascript
+//diceroll function
+function diceRoll(dice, min, max) { 
+    var min = Math.ceil(min);
+    var max = Math.floor(max);
+    var result = 0;
+    var i;
+    for(i=dice; i > 0; i--){
+    var roll = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(roll);
+    result= result + roll;
+    }
+    return result;
+```
 
 <a href="timekeeper.html" target="blank">Try it out</a>
 
