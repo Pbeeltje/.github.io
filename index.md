@@ -2,7 +2,7 @@
 Below are some of the coding projects I've been working on:
 
 #### Python
-[Character Generator](#Chargen)
+[Character Generator](#Chargen) <hr>
 [Stock Price email alert](#Stockcheck)
 
 #### JavaScript
