@@ -30,5 +30,12 @@ Syntax highlighted code block
 
 ### Timekeeper
 <a name="Timekeeper"></a>
+This project is basically a manual clock. I made it as a tool for a boardgame where 'game-time'is seperate from 'real-time'.
+It comes in handy because sometime's a minute of game-time might be cause for 20 minutes of discussion in real time, and often the opposite is the case
+where hours or days pass in seconds. 
+
+Besides tracking time, whenever anything more than 2 hours passes the program rolls two six-sides die to determine the weather.
+
+[Try it out](timekeeper.html)
 
 
