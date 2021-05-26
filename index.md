@@ -135,7 +135,7 @@ It comes in handy because sometime's a minute of game-time might be cause for 20
 
 Besides tracking time, whenever any period longer than 2 hours passes the program rolls two six-sides die to determine the weather.
 
-The diceroll function, you can choose the amount and upper/lower limit of the die:
+Below is the diceroll function. It takes three variables: the amount of dice and upper/lower limit of the die:
 
 ```javascript
 //diceroll function
