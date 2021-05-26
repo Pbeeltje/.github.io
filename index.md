@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/Pbeeltje/.github.io/edit/g
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-[Timekeeper]this
+[Timekeeper] this
 
 ### Markdown
 
@@ -28,6 +28,6 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-### Timekeeper
+### Timekeeper [Timekeeper] ##
 
 
