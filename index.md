@@ -1,4 +1,4 @@
-## Projects
+## Portfolio Philip Beeltje
 Below are some of the coding projects I've been working on:
 
 #### Python
