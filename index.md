@@ -1,13 +1,10 @@
 ## Projects
+Below are some of the coding projects I've been working on:
 
-You can use the [editor on GitHub](https://github.com/Pbeeltje/.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-###Python
+### Python
 [Character Generator](#Chargen)
 
-###JavaScript
+### JavaScript
 [Timekeeper](#Timekeeper)
 
 ### Character Generator
