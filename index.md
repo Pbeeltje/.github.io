@@ -1,5 +1,7 @@
-## Portfolio Philip Beeltje
-Below are some of the coding projects I've been working on:
+## About
+Hello! I'm Philip Beeltje, a recent Chinese Studies graduate, who is currently trying to learn how to code.
+
+Below are some of the projects I've been working on:
 
 #### Python
 [Character Generator](#Chargen)  
