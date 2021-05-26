@@ -17,7 +17,7 @@ Below are some of the projects I've been working on:
 <a name="Chargen"></a>
 This Program generates characters for a boardgame. First the program asks how many Sets and characters per set you want. 
 
-A character consists of a Name, an Occupation, a Quirk and some Stats (ie Strength, Agility). Names are generated from parts of names stored in arrays. The program then randomly picks an occupation with the appropriate trade-goods from a table in an excel file, along with a Quirk and a random piece of equipment. Stats are rolled randomly, one stat will be dependant on the occupation. 
+A character consists of a Name, an Occupation, a Quirk and some Stats (ie Strength, Agility). Names are generated from parts stored in arrays. The program then randomly picks an occupation with the appropriate trade-goods from a table in an excel file, along with a Quirk and a random piece of equipment. Stats are rolled randomly, one stat will be dependent on the occupation. 
 
 This little function counts the number of rows that are filled in in the excell sheet. This makes it so you can keep adding new things to the sheet without having to change any code:
 ```python
