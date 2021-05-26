@@ -3,6 +3,7 @@ Below are some of the coding projects I've been working on:
 
 #### Python
 [Character Generator](#Chargen)
+[Stock Price email alert](#Stockcheck)
 
 #### JavaScript
 [Timekeeper](#Timekeeper)
@@ -40,6 +41,87 @@ document.save(docname)
 
 At one time this project was pretty clean! it's become a bit more jumbled over time as I added more features.
 [Check out the program](https://github.com/Pbeeltje/DCCgen) 
+
+### Stock Alert
+<a name="Stockcheck"></a>
+This short program takes stock information from the alpha vantage API and when the price passes a certain barrier it sends an email.
+The stocks you want to track are manually inserted into the stock_list dictionary/3d array, along with an upper and lower price-limit which will trigger alerts.
+
+The program checks the price every 300ms.
+
+Code: (won't work as is, as you need to set up your own API code and e-mail)
+```markdown
+"""
+Created on Tue Dec 15 14:24:01 2020
+
+@author: p beeltje
+"""
+
+import pandas as pd #data manipulation and analysis package
+from alpha_vantage.timeseries import TimeSeries #enables data pull from Alpha Vantage
+#import matplotlib.pyplot as plt #if you want to plot your findings
+import time
+import smtplib #enables you to send emails
+#from email.message import EmailMessage better email formatting 
+
+
+stock_list = [['ACB','6','14','0'],
+              ['CRWD','165','185','0'],
+              ['PEIX','5','9','0'],
+              ['XXL','18','25','0']] #insert stock alert array here [name,low,high,0] 0 is the per stock email counter starting point
+
+
+max_emails = 5 # max emails before script stops sending emails
+
+while True:
+    
+    for item in stock_list:
+        stock = item[0] #takes stock code from array
+        terror_price = int(item[1]) #takes low price from array
+        target_sell_price = int(item[2]) #takes high price from array
+        
+        
+        #Getting the data from alpha vantage
+        ts = TimeSeries(key='Api Key', output_format='pandas') # dont forget your API key
+        data, meta_data = ts.get_intraday(symbol=stock,interval='1min', outputsize='full')
+        
+        #We are currently interested in the latest price
+        close_data = data['4. close'] #The close data column
+        last_price = close_data[0] #Selecting the last price from the close_data column
+        #Check if you're getting a correct value
+        print(last_price) 
+        
+        
+        #Set the desired message you want to see once the stock price is at a certain level
+        sender_email = "sssss@gmail.com" #The sender email
+        rec_email = "ssss@gmail.com" #The receiver email
+        password = ("password") #The password to the sender email, need special APP Password for gmail
+        
+        item[3]=int(item[3]) #prepare email counter
+        
+        if last_price > target_sell_price and item[3] < max_emails:
+            message = stock + " REJOICE!!! The stock has passed " + target_sell_price + " current price: " +  last_price  #The message you want to send
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(sender_email, password) #logs into your email account
+            print("Login Success") #confirms that you have logged in succesfully
+            server.sendmail(sender_email, rec_email, message) #send the email with your custom mesage
+            print("Email was sent") #confirms that the email was sent 
+            item[3]+=1
+            print(item[3] + " emails sent for " + stock)
+        elif last_price < terror_price and item[3] < max_emails:
+            message = stock + " ALERT!!! The stock has dropped below " + terror_price + " current price: " +  last_price   #The message you want to send
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(sender_email, password) #logs into your email account
+            print("Login Success") #confirms that you have logged in succesfully
+            server.sendmail(sender_email, rec_email, message) #send the email with your custom mesage
+            print("Email was sent") #confirms that the email was sent 
+            item[3]+=1
+            print(item[3] + " emails sent for " + stock)
+            
+        time.sleep(300)
+```
 
 ### Timekeeper
 <a name="Timekeeper"></a>
