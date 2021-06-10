@@ -44,6 +44,9 @@ document.save(docname)
 
 <a href="exampledoc.jpg" target="blank"><img src="exampledoc.jpg"></a>
 
+I also made a little GUI version using PySimpleGUI. 
+<img src="simplegui.jpg">
+
 At one time this project was pretty clean! it's become a bit more jumbled over time as I added more features.  
 [Repository](https://github.com/Pbeeltje/DCCgen) 
 
